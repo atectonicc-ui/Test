@@ -13,6 +13,23 @@
 
 > *Note: "iPhone 18" design details below are creative direction, not confirmed hardware specs. Finalize industrial-design references against the locked CAD from the client before lookdev.*
 
+## ▶ The Motion Graphic
+
+**[`media/iphone-18-reveal.mp4`](media/iphone-18-reveal.mp4)**: the 30-second film, 1920×1080, 24 fps, with an original synthesized score (AAC, about −14 LUFS).
+
+It is a **procedural motion piece** built to this brief. Every scene, timecode, on-screen line, color token and sound cue below is implemented, but the image is drawn with code (HTML Canvas and Web Audio), not photoreal CG. Treat it as an animatic for timing, typography, transitions and sound. It sets up the full CG production and does not replace it.
+
+| | | | |
+|---|---|---|---|
+| ![Origin](media/stills/01-origin.jpg) | ![Liquid](media/stills/02-liquid.jpg) | ![Solidify](media/stills/03-solidify.jpg) | ![Frame](media/stills/04-frame.jpg) |
+| 0:02 Origin | 0:06 Liquid to Form | 0:08 Solidify | 0:11 The Frame |
+| ![Eye](media/stills/05-eye.jpg) | ![Capture](media/stills/06-capture.jpg) | ![Display](media/stills/07-display.jpg) | ![Reveal](media/stills/08-reveal.jpg) |
+| 0:14 Eye | 0:17 Capture | 0:23 Liquid Display | 0:28 Reveal |
+
+**Files**
+- [`index.html`](index.html): the source of the film. Open it in a browser to play it live with sound, scrub the timeline (Space toggles play), or jump to a moment with `index.html?t=15`. Picture and score are both deterministic, so every play matches the MP4 exactly.
+- [`render.mjs`](render.mjs): renders the MP4 and the stills frame by frame with Playwright and ffmpeg. Run `npm i && npm run render` (needs ffmpeg) or `npm run stills`.
+
 ---
 
 ## 1. Visual Style & Aesthetics
